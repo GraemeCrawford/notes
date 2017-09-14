@@ -106,6 +106,17 @@ UN  192.168.x.y   208.47 KiB   256          100.0%            xxxx-xxxx-xxxx-xxx
 
 ##### You should now be able to see all of the nodes you configured and you have just successfully set up a multi-node Cassandra cluster.
 
+##### You should also be able to log in from the CQLSH command line utility from any node in the cluster, to any other node in the cluster:
+
+If you haven't already, install the CQLSH command line utility:
+
+- [Follow the instructions here](cqlsh-interface.md)
+
+Then run the command:
+
+- ```cqlsh 192.168.x.x 9042```
+  - **192.168.x.x** being the IP address of the **remote** server, and **9042** being the **native_transport_port** set in the **cassandra.yaml** configuration file
+
 ## Example Config:
 
 - [Example cassandra.yaml config file](example-cassandra-config.md)

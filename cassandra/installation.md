@@ -42,7 +42,9 @@ Verify that Cassandra is running by invoking:
 
 ```nodetool status```
 
+### Install the CQLSH command line utility:
 
+- [Follow the instructions here](cqlsh-interface.md)
 
 The default location of configuration files is:
 
