@@ -13,6 +13,6 @@ You need to install a few things to make this work:
 
  #### Set the following environment variable:
 
- ```export CQLSH_NO_BUNDLED=true```
-
- 
+- ```export CQLSH_NO_BUNDLED=true```
+  - To make this permanent edit **/etc/environment** and add the line:
+    - ```CQLSH_NO_BUNDLED=true```
