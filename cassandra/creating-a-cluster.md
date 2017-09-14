@@ -84,6 +84,26 @@ Commands:
 
 
 
+**Step 4**
+
+Check the Cluster Status:
+
+- ```sudo nodetool status```
+
+```
+root@cassandra-1:/# nodetool status
+Datacenter: dc1
+===============
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address         Load       Tokens       Owns (effective)  Host ID                               Rack
+UN  192.168.x.x   137.21 KiB   256          100.0%            xxxx-xxxx-xxxx-xxxx-xxxx              rack1
+UN  192.168.x.y   208.47 KiB   256          100.0%            xxxx-xxxx-xxxx-xxxx-xxxx              rack1
+
+```
+
+
+##### You should now be able to see all of the nodes you configured and you have just successfully set up a multi-node Cassandra cluster.
 
 
 
