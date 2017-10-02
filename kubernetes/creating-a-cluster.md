@@ -65,7 +65,7 @@ Your cluster domain.com is ready
 
 
 
-** Delete your running cluster **
+**Delete your running cluster**
 
 - ```kops delete cluster dns.name.com --yes```
 
