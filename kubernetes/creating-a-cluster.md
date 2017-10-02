@@ -56,9 +56,9 @@ nodes			        Node	  t2.micro	  2	    2	    eu-west-1a
 
 NODE STATUS
 NAME			   ROLE	    READY
-ip-172-x-y-z.eu	          node  True
-ip-172-x-y-z.eu	          master True
-ip-172-x-y-z.eu	          node	 True
+ip-172-x-y-z.eu	           node     True
+ip-172-x-y-z.eu	           master   True
+ip-172-x-y-z.eu	           node	   True
 
 Your cluster domain.com is ready
 ```
