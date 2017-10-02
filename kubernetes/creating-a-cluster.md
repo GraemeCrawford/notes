@@ -3,7 +3,7 @@
 In order to stop kops asking you to specify the S3 bucket everytime you run a command, add the following to your .bashrc or .zshrc
 
 - ```vim ~/.zshrc```
-  - ```export export KOPS_STATE_STORE=s3://kops-state-b33445566``` ** replace with the name of your kops-state bucket**
+  - ```export export KOPS_STATE_STORE=s3://kops-state-b33445566``` **replace with the name of your kops-state bucket**
 
 
 **For the below instructions, substitute dns.name.com with your fully qualified domain name**
@@ -33,7 +33,7 @@ In order to stop kops asking you to specify the S3 bucket everytime you run a co
 
 - ```kops get cluster```
 
-** Validate your cluster:**
+**Validate your cluster:**
 
 - ``` kops validate cluster ```
 
