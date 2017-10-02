@@ -1,0 +1,13 @@
+Different ways to set up Kubernetes:
+
+Minikube: local kubernetes cluster
+
+Kops: cluster on AWS - highly available production cluster
+
+
+
+## Kops
+
+Kubernetes Operations
+
+- production grade installations, upgrades and management.
