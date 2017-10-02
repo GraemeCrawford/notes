@@ -52,13 +52,13 @@ Validating cluster domain.com
 INSTANCE GROUPS
 NAME			         ROLE	  MACHINETYPE	 MIN	  MAX	  SUBNETS
 master-eu-west-1a	        Master	  t2.micro	  1	    1	    eu-west-1a
-nodes			        Node	  t2.micro	    2	    2	    eu-west-1a
+nodes			        Node	  t2.micro	  2	    2	    eu-west-1a
 
 NODE STATUS
 NAME			   ROLE	    READY
-ip-172-x-y-z.eu	    node	    True
-ip-172-x-y-z.eu	    master	  True
-ip-172-x-y-z.eu	    node	    True
+ip-172-x-y-z.eu	          node  True
+ip-172-x-y-z.eu	          master True
+ip-172-x-y-z.eu	          node	 True
 
 Your cluster domain.com is ready
 ```
