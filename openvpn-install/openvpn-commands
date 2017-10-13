@@ -1,0 +1,45 @@
+systemctl stop iptables
+yum install -y openvpn
+cd /usr/share/doc/openvpn-2.4.3/sample/sample-config-files/
+cp server.conf /etc/openvpn/
+cd /etc/openvpn/
+vim server.conf
+
+yum install -y easy-rsa
+mkdir -p /etc/openvpn/easy-rsa/keys
+cp -rf /usr/share/easy-rsa/2.0/* /etc/openvpn/easy-rsa/
+cd /etc/openvpn/easy-rsa
+
+vim vars
+( set the vars to what you want them to be )
+
+source ./vars
+./clean-all
+./build-ca
+./build-key-server $( hostname )
+./build-dh
+cd keys/
+cp ca.crt km20538-06.crt km20538-06.key dh2048.pem /etc/openvpn/
+cd /etc/openvpn/
+
+restorecon -Rv /etc/openvpn
+ln -s /lib/systemd/system/openvpn@.service /etc/systemd/system/multi-user.target.wants/openvpn\@server.service
+
+systemctl -f enable openvpn@server.service
+
+
+cd /etc/openvpn/easy-rsa
+source ./vars
+./build-key work-client
+
+echo net.ipv4.ip_forward=1 >> /etc/sysctl.conf
+sysctl -p
+vim /etc/pam.d/openvpn     ( refer to pamd.d-openvpn file )
+
+cd /etc/openvpn/
+
+systemctl restart openvpn@server.service
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j MASQUERADE
+
+mkdir /var/log/myvpn
+touch /var/log/myvpn/openvpn.log
