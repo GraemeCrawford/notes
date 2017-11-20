@@ -1,6 +1,6 @@
 Configuration:
 
-** By default the kubernetes config ( yaml ) files are in the /etc/kubernetes/manifests directory.**
+**By default the kubernetes config ( yaml ) files are in the /etc/kubernetes/manifests directory.**
 
 
 
