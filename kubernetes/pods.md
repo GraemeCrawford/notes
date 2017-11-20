@@ -44,7 +44,7 @@ Check the pod has been created successfully:
 | Command | Description |
 |---------|-------------|
 |**kubectl get pods** | Get info about all running pods |
-|**kubectl describe pods pod_name* | Describe one pod |
+|**kubectl describe pods pod_name** | Describe one pod |
 |**kubectl expose pod pod_name --port=444 --name=frontend** | Expose the port of a pod (creates new service) |
 |**kubectl port-forward pod_name 8080** | Port forward the exposed pod port to your local machine |
 |**kubectl attach pod_name -i** | Attach to the pod |
