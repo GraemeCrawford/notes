@@ -6,7 +6,7 @@
   - Those apps can communicate with each other using their local port numbers
 
 
-- ** Containers in the same pod can communicate with each other as if they are the same host.** For example you have a front end app running on port 80, and a back end app running on port 5000 both in the same pod. If you open a shell into the the front end container, you can access **localhost:5000** and you will hit the back end app.
+- **Containers in the same pod can communicate with each other as if they are the same host.** For example you have a front end app running on port 80, and a back end app running on port 5000 both in the same pod. If you open a shell into the the front end container, you can access **localhost:5000** and you will hit the back end app.
 
 **Example Pod definition file:**
 
