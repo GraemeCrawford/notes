@@ -13,3 +13,5 @@
 - [Pods](pods.md)
 
 - [Scaling Pods](scaling-pods.md)
+
+- [Deployments](deployments.md)
