@@ -1,11 +1,11 @@
 Configuration:
 
-** By default the kubernetes config ( yaml ) files are in the /etc/kubernetes/manifests directory.**
+**By default the kubernetes config ( yaml ) files are in the /etc/kubernetes/manifests directory.**
 
 
 
 
-```yaml
+```
 kind: EncryptionConfig
 apiVersion: v1
 resources:
@@ -40,7 +40,7 @@ The providers array is an ordered list of the possible encryption providers, and
 
 Create the following file somewhere sensible - perhaps **/etc/kubernetes/manifests/encryption.yaml**
 
-```yaml
+```
 kind: EncryptionConfig
 apiVersion: v1
 resources:
@@ -64,7 +64,7 @@ Generate a 32 byte random key and base64 encode it. If you’re on Linux or Mac 
 
 - Set the **--experimental-encryption-provider-config** flag in the kube-apiserver config file in the following section:
 
-  ```yaml
+  ```
   spec:
   containers:
   - command:

@@ -1,6 +1,6 @@
 ## Running Applications on Kubernetes cluster
 
-** Now we can run applications on the Kubernetes cluster**
+**Now we can run applications on the Kubernetes cluster**
 
 - ```kubectl run hello-minikube --image=gcr.io/google_containers/echoserver:1.4 --port=8080```
 

@@ -3,7 +3,7 @@
 In order to stop kops asking you to specify the S3 bucket everytime you run a command, add the following to your .bashrc or .zshrc
 
 - ```vim ~/.zshrc```
-  - ```export export KOPS_STATE_STORE=s3://kops-state-b33445566``` ** replace with the name of your kops-state bucket**
+  - ```export KOPS_STATE_STORE=s3://kops-state-b33445566``` **replace with the name of your kops-state bucket**
 
 
 **For the below instructions, substitute dns.name.com with your fully qualified domain name**
@@ -33,7 +33,7 @@ In order to stop kops asking you to specify the S3 bucket everytime you run a co
 
 - ```kops get cluster```
 
-** Validate your cluster:**
+**Validate your cluster:**
 
 - ``` kops validate cluster ```
 
@@ -50,22 +50,22 @@ Using cluster from kubectl context: domain.com
 Validating cluster domain.com
 
 INSTANCE GROUPS
-NAME			         ROLE	  MACHINETYPE	 MIN	  MAX	  SUBNETS
-master-eu-west-1a	    Master	t2.micro	    1	    1	    eu-west-1a
-nodes			        Node	  t2.micro	    2	    2	    eu-west-1a
+NAME			        ROLE	  MACHINETYPE	 MIN	   MAX	  SUBNETS
+master-eu-west-1a	        Master	  t2.micro	  1	    1	    eu-west-1a
+nodes			        Node	  t2.micro	  2	    2	    eu-west-1a
 
 NODE STATUS
 NAME			   ROLE	    READY
-ip-172-x-y-z.eu	node	    True
-ip-172-x-y-z.eu	master	  True
-ip-172-x-y-z.eu	node	    True
+ip-172-x-y-z.eu	           node     True
+ip-172-x-y-z.eu	           master   True
+ip-172-x-y-z.eu	           node	    True
 
 Your cluster domain.com is ready
 ```
 
 
 
-** Delete your running cluster**
+**Delete your running cluster**
 
 - ```kops delete cluster dns.name.com --yes```
 
