@@ -1,0 +1,43 @@
+--ca-cert-file=FILE
+                      File containing CA certificates for the service
+                      certificate files
+
+  --setup-dns         configure bind with our zone
+
+
+
+Certificate system options:
+
+  --external-ca       Generate a CSR for the IPA CA certificate to be signed
+                      by an external CA
+
+  --external-ca-type={generic,ms-cs}
+                      Type of the external CA
+  --external-cert-file=FILE
+                      File containing the IPA CA certificate and the
+                      external CA certificate chain
+  --subject-base=SUBJECT_BASE
+                      The certificate subject base (default O=<realm-name>).
+                      RDNs are in LDAP order (most specific RDN first).
+  --ca-subject=CA_SUBJECT
+                      The CA certificate subject DN (default CN=Certificate
+                      Authority,O=<realm-name>). RDNs are in LDAP order
+                      (most specific RDN first).
+  --ca-signing-algorithm={SHA1withRSA,SHA256withRSA,SHA512withRSA}
+                      Signing algorithm of the IPA CA certificate
+
+
+DNS options:
+
+  --reverse-zone=REVERSE_ZONE
+                      The reverse DNS zone to use. This option can be used
+                      multiple times
+  --no-reverse        Do not create new reverse DNS zone
+  --auto-reverse      Create necessary reverse zones
+
+  --forwarder=FORWARDERS
+                      Add a DNS forwarder. This option can be used multiple
+                      times
+
+  --forward-policy={first,only}
+                      DNS forwarding policy for global forwarders
