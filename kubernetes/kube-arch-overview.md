@@ -6,7 +6,7 @@ Each **Node** consists of N number of **Pods**, this can be zero pods, or multip
 
 Each **Pod** consists of N number of **Containers**, this can be zero containers, or multiple containers.
 
-**Pods** run on top of **Docker**, or another containerisation platform of your choice.
+  - **Pods** run on top of **Docker**, or another containerisation platform of your choice.
 
 Each **Node** contains a **kubelet** and a **kube-proxy**, as well as **IPtables**.
   - The **kubelet** launches and manages pods (it connects to the Master Node to get information on what it should be running)
