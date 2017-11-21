@@ -37,24 +37,24 @@ Create the **replica controller** yaml file for the **helloworld** application
 
   - [helloworld-rep-controller.yml](./definitions/helloworld-rep-controller.yml)
 
-Create the replica controller from the file definition
+**Create the replica controller from the file definition**
   - `kubectl create -f helloworld-rep-controller.yml`
 
-Check that the pods are being created
+**Check that the pods are being created**
   - `kubectl get pods`
     - This should show the number of pods being created, corresponding to the number of replicas set in the replica-controller definition file
 
-You can check the description of the pods as follows
+**You can check the description of the pods as follows**
   - `kubectl desc helloworld-controller-t5rk8`
 
-Put the replica controller through its paces by deleting one of your pods
+**Put the replica controller through its paces by deleting one of your pods**
   - `kubectl delete pod helloworld-controller-t5rk8`
 
-Check that the replica controller instantly creates a new pod to keep the number of replicas you have requested
+**Check that the replica controller instantly creates a new pod to keep the number of replicas you have requested**
   - `kubectl get pods`
-    - This should show the pod you just deleted being terminated, and a new pod created in it's place
+    - *This should show the pod you just deleted being terminated, and a new pod created in it's place*
 
-You can now manually specify to the replica controller how many replicas you want
+**You can now manually specify to the replica controller how many replicas you want**
   - By using the file:
     - `kubectl scale --replicas=4 -f helloworld-rep-controller.yml`
 
