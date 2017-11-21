@@ -2,7 +2,7 @@
 
 - [Definition Files](./definitions)
 
-- [High Level Architecture Overview](kube-arch-overview.png)
+- [High Level Architecture Overview](kube-arch-overview.md)
 
 - [Preparing AWS and local machine for Kubernetes](preparing-kops-install.md)
 
