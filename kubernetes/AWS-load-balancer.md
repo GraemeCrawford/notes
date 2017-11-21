@@ -53,13 +53,22 @@ Now create the Load Balancer service
 
 - `kubectl create -f path/to/lb-file`
 
-# Check that the load balancer has been created on AWS
 
-Login to AWS > Services > EC2 > Load Balancers
+### Check that the load balancer has been created on AWS
+
+Login to `AWS > Services > EC2 > Load Balancers`
 
 Your load balancer should be listed
 
+Take note of the name of the load balancer
 
 
-# Create AWS Route53 route for accessing your app from the internet via your domain name
+### Create AWS Route53 route for accessing your app from the internet via your domain name
+
+In AWS, select `Services > Route53 > Hosted Zones > your_domain > Create Record Set`
+
+- Give the record a name, ie. myapp.mydomain.com
+- Select `Alias: yes`
+- From `Alias Target:` Select the name of your Load Balancer
+- Create
 
