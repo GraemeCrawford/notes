@@ -61,4 +61,4 @@ Create the **replica controller** yaml file for the **helloworld** application
 
   - By using the replica controllers name
     - `kubectl get rc`
-    - `kubectl scale --replicas=1 rc/<replica_controller_name`
+    - `kubectl scale --replicas=1 rc/<replica_controller_name>`
