@@ -58,9 +58,9 @@ Check the status of the deployment:
 
 *Now if we like we can change the image being used by the deployment by editing the deployment:*
 
-  - `kubectl set image deployment/helloworld-deployment <container_name>=<image_name:tag>`
+  - `kubectl set image deployment/helloworld-deployment <container_name>=<image_name:tag> --record=true`
 
-  *Note: the container_name is the name you gave the container in the deployment definition container spec section*
+  *Note: the container_name is the name you gave the container in the deployment definition container spec section and we add --record=true in order to get a description of previous deployments when we check the deployment history later on*
 
   **This is how we'd manually update the version of the running container image**
 
