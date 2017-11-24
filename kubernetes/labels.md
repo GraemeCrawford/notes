@@ -43,6 +43,18 @@ To assign a label to a node, first we want to get the name of the node we want t
   - `kubectl get nodes`
 
 Then we assign the label to the desired node:
-  - `kubectl label nodes <node_name> key=var`
+  - `kubectl label nodes <node_name> key=value`
 
 For example: `kubectl label nodes node1.eu-west-1.compute.internal environment=development`
+
+Now that we have the node labeled with our key value pair (environment=development), we can add our nodeSelector to our deployment definition file:
+
+  - under the `container:` section we just need to add:
+    ```
+      nodeSelector:
+        environment: development
+    ```
+
+Now when we create our deployment `kubectl create -f /definitions/helloworld-deployment.yml`, our pods will only be created on the nodes with labels that match our `nodeSelector` key/value pair.
+
+You can confirm this by describing the pod `kubectl describe pod <pod_name>`

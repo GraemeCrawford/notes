@@ -16,5 +16,11 @@ spec:
         ports:
         - name: nodejs-port
           containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: nodejs-port
+          initialDelaySeconds: 15
+          timeoutSeconds: 30
       nodeSelector:
         environment: development
