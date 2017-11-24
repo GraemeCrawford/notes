@@ -15,3 +15,9 @@
 - [Scaling Pods](scaling-pods.md)
 
 - [Deployments](deployments.md)
+
+- [AWS Load Balancer](AWS-load-balancer.md)
+
+- [Creating Services](services.md)
+
+- [Labels](labels.md)

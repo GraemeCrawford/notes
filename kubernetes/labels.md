@@ -35,3 +35,14 @@ Once nodes are tagged, you can use label selectors in definition files to only a
 There are two steps required to achieve this:
   - first you must tag the node
   - then add a nodeSelector to your pod configuration (definition file)
+
+Let's check the labels assigned to our nodes:
+  - `kubectl get nodes --show-labels`
+
+To assign a label to a node, first we want to get the name of the node we want to label:
+  - `kubectl get nodes`
+
+Then we assign the label to the desired node:
+  - `kubectl label nodes <node_name> key=var`
+
+For example: `kubectl label nodes node1.eu-west-1.compute.internal environment=development`
