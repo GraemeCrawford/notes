@@ -23,3 +23,5 @@
 - [Labels](labels.md)
 
 - [Health Checks](health-checks.md)
+
+- [Secrets](secrets.md)
