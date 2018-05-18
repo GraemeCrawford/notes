@@ -1,0 +1,3 @@
+At least 3 servers required
+
+You can run 3 mysql server instances on one machine, using different data directories, or they can reside on 3 physical machines

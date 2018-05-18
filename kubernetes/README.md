@@ -25,3 +25,7 @@
 - [Health Checks](health-checks.md)
 
 - [Secrets](secrets.md)
+
+- [Tear Down Node](tear-down.md)
+
+- [Config Map](config-map.md)
